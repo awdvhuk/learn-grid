@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Container properties</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      grid-template-columns: 240px 1fr;
+      grid-template-rows: 80px 1fr 50px;
+      grid-template-areas: "header header""sidebar content""footer footer";
+    }
+
+    section {
+      display: grid;
+      grid-template-areas: "... ... " "... text" "... ...";
+      grid-template-columns: 50px 1fr;
+      grid-template-rows: 40px 1fr 4fr;
+    }
+
+    section p {
+      grid-area: text;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="../index.html">Home</a>
+    <a href="./index.html">Container properties</a>
+    <a href="../items/index.html">Items properties</a>
+  </header>
+
+  <aside>
+    <a href="">grid-template-columns</a>
+    <a href="">grid-template-rows</a>
+    <a href="">grid-template-areas</a>
+    <a href="">grid-template</a>
+    <a href="">grid-column-gap</a>
+    <a href="">grid-row-gap</a>
+    <a href="">grid-gap</a>
+    <a href="">justify-items</a>
+    <a href="">align-items</a>
+    <a href="">justify-content</a>
+    <a href="">align-content</a>
+    <a href="">grid-auto-columns</a>
+    <a href="">grid-auto-rows</a>
+    <a href="">grid-auto-flow</a>
+    <a href="">grid</a>
+  </aside>
+
+  <section>
+    <p>Для того чтобы начать работу, нам нужно определить элемент-контейнер с помощью "display: grid"</p>
+  </section>
+
+  <footer>Don't be afraid by something new</footer>
+</body>
+
+</html>

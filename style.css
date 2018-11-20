@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr 370px 50px;
+  grid-template-areas: "header" "content" "..." "footer";
+}
+
+header {
+  font-size: 26px;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  background: #bd4242;
+}
+
+aside {
+  grid-area: sidebar;
+  box-shadow: 6px 5px 15px -6px grey;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: repeat(auto-fill, 36px);
+  font-size: 21px;
+  overflow: auto;
+}
+
+aside a {
+  color: black;
+}
+
+section {
+  grid-area: content;
+  justify-self: center;
+  align-self: center;
+  font-size: 35px;
+}
+
+footer {
+  grid-area: footer;
+  justify-self: center;
+  align-self: start;
+  min-height: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
