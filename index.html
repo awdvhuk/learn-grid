@@ -6,10 +6,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Learn grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    html,
+    body,
+    .container {
+      height: 100%;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      display: grid;
+
+      grid-template-columns: 1fr;
+      grid-template-rows: 80px 1fr 50px;
+      grid-template-areas: "header" "content" "footer";
+    }
+
+    header {
+      grid-area: header;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      justify-items: center;
+      align-items: center;
+      background: #bd4242;
+    }
+
+    section {
+      grid-area: content;
+      justify-self: center;
+      align-self: center;
+      font-size: 35px;
+    }
+
+    footer {
+      grid-area: footer;
+      justify-self: center;
+      align-self: start;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <header>
+      <a href="">Link 1</a>
+      <a href="">Link 2</a>
+      <a href="">Link 3</a>
+      <a href="">Link 4</a>
+      <a href="">Link 5</a>
+    </header>
 
+    <section>
+      Let's try some grids!
+    </section>
+
+    <footer>Don't be afraid by something new</footer>
+  </div>
 </body>
 
 </html>
