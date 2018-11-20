@@ -14,15 +14,25 @@
       grid-template-areas: "header header""sidebar content""footer footer";
     }
 
+    aside {
+      grid-template-rows: repeat(auto-fill, 80px);
+    }
+
     section {
       display: grid;
-      grid-template-areas: "... ... " "... text" "... ...";
+      grid-template-areas: "... ... ""... text""... ...";
       grid-template-columns: 50px 1fr;
-      grid-template-rows: 40px 1fr 4fr;
+      grid-template-rows: 30px 170px 4fr 1fr;
     }
 
     section p {
       grid-area: text;
+    }
+
+    img {
+      width: 100%;
+      grid-row-start: 3;
+      grid-column-start: 2;
     }
   </style>
 </head>
@@ -35,17 +45,30 @@
   </header>
 
   <aside>
-    <a href="">grid-template-columns</a>
-    <a href="">grid-template-rows</a>
+    <a href="">
+      <span>grid-template-columns</span>
+      <span>grid-template-rows</span>
+    </a>
+
     <a href="">grid-template-areas</a>
     <a href="">grid-template</a>
-    <a href="">grid-column-gap</a>
-    <a href="">grid-row-gap</a>
-    <a href="">grid-gap</a>
-    <a href="">justify-items</a>
-    <a href="">align-items</a>
-    <a href="">justify-content</a>
-    <a href="">align-content</a>
+
+    <a href="">
+      <span>grid-column-gap</span>
+      <span>grid-row-gap</span>
+      <span>grid-gap</span>
+    </a>
+
+    <a href="">
+      <span>justify-items</span>
+      <span>align-items</span>
+    </a>
+
+    <a href="">
+      <span>justify-content</span>
+      <span>align-content</span>
+    </a>
+
     <a href="">grid-auto-columns</a>
     <a href="">grid-auto-rows</a>
     <a href="">grid-auto-flow</a>
@@ -54,6 +77,7 @@
 
   <section>
     <p>Для того чтобы начать работу, нам нужно определить элемент-контейнер с помощью "display: grid"</p>
+    <img src="./images/terms.jpg" alt="">
   </section>
 
   <footer>Don't be afraid by something new</footer>

@@ -16,7 +16,12 @@
 
     section {
       display: grid;
+      align-self: start;
       grid-template: 15px repeat(19, 1fr) / repeat(20, 1fr);
+    }
+
+    aside {
+      grid-template-rows: repeat(auto-fill, 70px);
     }
 
     section img {
@@ -67,15 +72,26 @@
   </header>
 
   <aside>
-    <a href="">grid-column-start</a>
-    <a href="">grid-column-end</a>
-    <a href="">grid-row-start</a>
-    <a href="">grid-row-end</a>
-    <a href="">grid-column</a>
-    <a href="">grid-row</a>
     <a href="">grid-area</a>
-    <a href="">justify-self</a>
-    <a href="">align-self</a>
+    <a href="">
+      <span>grid-column-start</span>
+      <span>grid-column-end</span>
+    </a>
+
+    <a href="">
+      <span>grid-row-start</span>
+      <span>grid-row-end</span>
+    </a>
+
+    <a href="">
+      <span>grid-column</span>
+      <span>grid-row</span>
+    </a>
+
+    <a href="">
+      <span>justify-self</span>
+      <span>align-self</span>
+    </a>
   </aside>
 
   <section>

@@ -8,6 +8,22 @@
   <title>Learn grid</title>
   <link rel="stylesheet" href="./style.css">
   <style>
+    section {
+      display: grid;
+      grid-template-rows: 0;
+    }
+
+    section>div {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      grid-gap: 7px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 3px;
+      vertical-align: middle;
+    }
   </style>
 </head>
 
@@ -19,7 +35,23 @@
   </header>
 
   <section>
-    Let's try some grids!
+    <!-- Let's try some grids! -->
+    <div>
+      <div><img src="./photos/1.png" alt=""></div>
+      <div><img src="./photos/2.png" alt=""></div>
+      <div><img src="./photos/3.png" alt=""></div>
+      <div><img src="./photos/4.png" alt=""></div>
+      <div><img src="./photos/5.png" alt=""></div>
+      <div><img src="./photos/6.png" alt=""></div>
+      <div><img src="./photos/7.png" alt=""></div>
+      <div><img src="./photos/8.png" alt=""></div>
+      <div><img src="./photos/9.png" alt=""></div>
+      <div><img src="./photos/10.png" alt=""></div>
+      <div><img src="./photos/11.png" alt=""></div>
+      <div><img src="./photos/12.png" alt=""></div>
+      <div><img src="./photos/13.png" alt=""></div>
+      <div><img src="./photos/14.png" alt=""></div>
+    </div>
   </section>
 
   <footer>Don't be afraid by something new</footer>
