@@ -16,13 +16,45 @@
 
     section {
       display: grid;
-      grid-template-areas: "... ... ""... text""... ...";
-      grid-template-columns: 50px 1fr;
-      grid-template-rows: 40px 1fr 4fr;
+      grid-template: 15px repeat(19, 1fr) / repeat(20, 1fr);
     }
 
-    section p {
-      grid-area: text;
+    section img {
+      width: 100%;
+    }
+
+    .face {
+      grid-row: 3 / 19;
+      grid-column: 3 / 16;
+    }
+
+    .hair {
+      z-index: 5;
+      grid-row: 2 / 19;
+      grid-column: 1 / 21;
+    }
+
+    .lips {
+      grid-row: 8 / 19;
+      grid-column: 3 / 16;
+    }
+
+    .nose {
+      grid-row: 7 / 10;
+      grid-column: 7 / 12;
+      z-index: 1;
+    }
+
+    .eye-left {
+      grid-row: 6 / 10;
+      grid-column: 4 / 8;
+      z-index: 1;
+    }
+
+    .eye-right {
+      grid-row: 6 / 10;
+      grid-column: 10 / 14;
+      z-index: 1;
     }
   </style>
 </head>
@@ -47,7 +79,12 @@
   </aside>
 
   <section>
-    <p>Let's try some grids!</p>
+    <img src="./images/face.jpg" alt="" class="face">
+    <img src="./images/hair.png" alt="" class="hair">
+    <img src="./images/nose.jpg" alt="" class="nose">
+    <img src="./images/lips.jpg" alt="" class="lips">
+    <img src="./images/eye-left.jpg" alt="" class="eye-left">
+    <img src="./images/eye-right.jpg" alt="" class="eye-right">
   </section>
 
   <footer>Don't be afraid by something new</footer>
