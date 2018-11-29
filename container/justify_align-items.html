@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>justify/align-items</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      grid-template-columns: 240px 1fr;
+      grid-template-rows: 80px 1fr 50px;
+      grid-template-areas: "header header""sidebar content""footer footer";
+    }
+
+    aside {
+      grid-template-rows: repeat(auto-fill, 80px);
+    }
+
+    section {
+      /* display: grid;
+      grid-template-areas: "... testArea""... ...";
+      grid-template-columns: 50px 1fr;
+      grid-template-rows: 170px 4fr 1fr; */
+      align-self: unset;
+      width: 90%;
+    }
+
+    .testArea {
+      grid-area: testArea;
+    }
+
+    .demonstration p {
+      grid-area: title;
+      justify-self: center;
+    }
+
+    .demonstration {
+      display: grid;
+      grid-template-areas: "...""title""...""content";
+      grid-template-rows: 200px auto 10px auto;
+      /* grid-template-rows: 30px auto 10px auto; */
+    }
+
+    .demonstration:first-child {
+      grid-template-rows: 30px auto 10px auto;
+    }
+
+    .demonstration:last-child {
+      grid-template-rows: 200px auto 10px auto 100px;
+    }
+
+    .gridContainer {
+      display: grid;
+      grid-area: content;
+      width: 100%;
+      background: rgb(0, 121, 0);
+      gap: 5px;
+      padding: 5px;
+      grid-template-columns: repeat(4, 1fr);
+      height: 500px;
+    }
+
+    .gridContainer__child {
+      padding: 10px;
+      background: rgb(21, 21, 158);
+      color: white;
+      font-size: 13px;
+      overflow: hidden;
+    }
+
+    .demonstration:nth-child(1) .gridContainer {
+      justify-items: left;
+    }
+
+    .demonstration:nth-child(2) .gridContainer {
+      justify-items: center;
+    }
+
+    .demonstration:nth-child(3) .gridContainer {
+      justify-items: right;
+    }
+
+    .demonstration:nth-child(4) .gridContainer {
+      justify-items: stretch;
+    }
+
+    .demonstration:nth-child(5) .gridContainer {
+      align-items: start;
+    }
+
+    .demonstration:nth-child(6) .gridContainer {
+      align-items: center;
+    }
+
+    .demonstration:nth-child(7) .gridContainer {
+      align-items: end;
+    }
+
+    .demonstration:nth-child(8) .gridContainer {
+      align-items: stretch;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="../index.html">Home</a>
+    <a href="./index.html">Container properties</a>
+    <a href="../items/index.html">Items properties</a>
+  </header>
+
+  <aside>
+    <a href="">
+      <span>grid-template-columns</span>
+      <span>grid-template-rows</span>
+    </a>
+
+    <a href="">grid-template-areas</a>
+
+    <a href="">grid-template</a>
+
+    <a href="">
+      <span>grid-column-gap</span>
+      <span>grid-row-gap</span>
+      <span>grid-gap</span>
+    </a>
+
+    <a href="">
+      <span>justify-items</span>
+      <span>align-items</span>
+    </a>
+
+    <a href="">
+      <span>justify-content</span>
+      <span>align-content</span>
+    </a>
+
+    <a href="">
+      <span>grid-auto-columns</span>
+      <span>grid-auto-rows</span>
+    </a>
+
+    <a href="">grid-auto-flow</a>
+
+    <a href="">grid</a>
+  </aside>
+
+  <section>
+    <div class="testArea">
+      <div class="demonstration">
+        <p>justify-items: left;</p>
+
+        <div class="gridContainer">
+          <div class="gridContainer__child">Child - 1</div>
+          <div class="gridContainer__child">Child - 2</div>
+          <div class="gridContainer__child">Child - 3</div>
+          <div class="gridContainer__child">Child - 4</div>
+          <div class="gridContainer__child">Child - 5</div>
+          <div class="gridContainer__child">Child - 6</div>
+          <div class="gridContainer__child">Child - 7</div>
+          <div class="gridContainer__child">Child - 8</div>
+          <div class="gridContainer__child">Child - 9</div>
+          <div class="gridContainer__child">Child - 10</div>
+        </div>
+      </div>
+
+      <div class="demonstration">
+        <p>justify-items: center;</p>
+
+        <div class="gridContainer">
+          <div class="gridContainer__child">Child - 1</div>
+          <div class="gridContainer__child">Child - 2</div>
+          <div class="gridContainer__child">Child - 3</div>
+          <div class="gridContainer__child">Child - 4</div>
+          <div class="gridContainer__child">Child - 5</div>
+          <div class="gridContainer__child">Child - 6</div>
+          <div class="gridContainer__child">Child - 7</div>
+          <div class="gridContainer__child">Child - 8</div>
+          <div class="gridContainer__child">Child - 9</div>
+          <div class="gridContainer__child">Child - 10</div>
+        </div>
+      </div>
+
+      <div class="demonstration">
+        <p>justify-items: right;</p>
+
+        <div class="gridContainer">
+          <div class="gridContainer__child">Child - 1</div>
+          <div class="gridContainer__child">Child - 2</div>
+          <div class="gridContainer__child">Child - 3</div>
+          <div class="gridContainer__child">Child - 4</div>
+          <div class="gridContainer__child">Child - 5</div>
+          <div class="gridContainer__child">Child - 6</div>
+          <div class="gridContainer__child">Child - 7</div>
+          <div class="gridContainer__child">Child - 8</div>
+          <div class="gridContainer__child">Child - 9</div>
+          <div class="gridContainer__child">Child - 10</div>
+        </div>
+      </div>
+      
+      <div class="demonstration">
+        <p>justify-items: stretch;</p>
+
+        <div class="gridContainer">
+          <div class="gridContainer__child">Child - 1</div>
+          <div class="gridContainer__child">Child - 2</div>
+          <div class="gridContainer__child">Child - 3</div>
+          <div class="gridContainer__child">Child - 4</div>
+          <div class="gridContainer__child">Child - 5</div>
+          <div class="gridContainer__child">Child - 6</div>
+          <div class="gridContainer__child">Child - 7</div>
+          <div class="gridContainer__child">Child - 8</div>
+          <div class="gridContainer__child">Child - 9</div>
+          <div class="gridContainer__child">Child - 10</div>
+        </div>
+      </div>
+
+      <div class="demonstration">
+        <p>align-items: start;</p>
+
+        <div class="gridContainer">
+          <div class="gridContainer__child">Child - 1</div>
+          <div class="gridContainer__child">Child - 2</div>
+          <div class="gridContainer__child">Child - 3</div>
+          <div class="gridContainer__child">Child - 4</div>
+          <div class="gridContainer__child">Child - 5</div>
+          <div class="gridContainer__child">Child - 6</div>
+          <div class="gridContainer__child">Child - 7</div>
+          <div class="gridContainer__child">Child - 8</div>
+          <div class="gridContainer__child">Child - 9</div>
+          <div class="gridContainer__child">Child - 10</div>
+        </div>
+      </div>
+
+      <div class="demonstration">
+        <p>align-items: center;</p>
+
+        <div class="gridContainer">
+          <div class="gridContainer__child">Child - 1</div>
+          <div class="gridContainer__child">Child - 2</div>
+          <div class="gridContainer__child">Child - 3</div>
+          <div class="gridContainer__child">Child - 4</div>
+          <div class="gridContainer__child">Child - 5</div>
+          <div class="gridContainer__child">Child - 6</div>
+          <div class="gridContainer__child">Child - 7</div>
+          <div class="gridContainer__child">Child - 8</div>
+          <div class="gridContainer__child">Child - 9</div>
+          <div class="gridContainer__child">Child - 10</div>
+        </div>
+      </div>
+
+      <div class="demonstration">
+        <p>align-items: end;</p>
+
+        <div class="gridContainer">
+          <div class="gridContainer__child">Child - 1</div>
+          <div class="gridContainer__child">Child - 2</div>
+          <div class="gridContainer__child">Child - 3</div>
+          <div class="gridContainer__child">Child - 4</div>
+          <div class="gridContainer__child">Child - 5</div>
+          <div class="gridContainer__child">Child - 6</div>
+          <div class="gridContainer__child">Child - 7</div>
+          <div class="gridContainer__child">Child - 8</div>
+          <div class="gridContainer__child">Child - 9</div>
+          <div class="gridContainer__child">Child - 10</div>
+        </div>
+      </div>
+
+      <div class="demonstration">
+        <p>align-items: stretch;</p>
+
+        <div class="gridContainer">
+          <div class="gridContainer__child">Child - 1</div>
+          <div class="gridContainer__child">Child - 2</div>
+          <div class="gridContainer__child">Child - 3</div>
+          <div class="gridContainer__child">Child - 4</div>
+          <div class="gridContainer__child">Child - 5</div>
+          <div class="gridContainer__child">Child - 6</div>
+          <div class="gridContainer__child">Child - 7</div>
+          <div class="gridContainer__child">Child - 8</div>
+          <div class="gridContainer__child">Child - 9</div>
+          <div class="gridContainer__child">Child - 10</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Don't be afraid by something new</footer>
+</body>
+
+</html>

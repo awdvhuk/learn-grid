@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>grid</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      grid-template-columns: 240px 1fr;
+      grid-template-rows: 80px 1fr 50px;
+      grid-template-areas: "header header""sidebar content""footer footer";
+    }
+
+    aside {
+      grid-template-rows: repeat(auto-fill, 80px);
+    }
+
+    section {
+      /* display: grid;
+      grid-template-areas: "... testArea""... ...";
+      grid-template-columns: 50px 1fr;
+      grid-template-rows: 170px 4fr 1fr; */
+      align-self: unset;
+      width: 90%;
+    }
+
+    .testArea {
+      grid-area: testArea;
+    }
+
+    .demonstration p {
+      grid-area: title;
+      justify-self: center;
+    }
+
+    .demonstration {
+      display: grid;
+      grid-template-areas: "...""title""...""content""...";
+      grid-template-rows: 30px auto 10px auto 80px;
+      /* grid-template-rows: 30px auto 10px auto; */
+    }
+
+    .gridContainer {
+      display: grid;
+      grid-area: content;
+      width: 100%;
+      background: rgb(0, 121, 0);
+      gap: 5px;
+      padding: 5px;
+      height: 1000px;
+    }
+
+    .gridContainer__child {
+      padding: 10px;
+      background: rgb(21, 21, 158);
+      color: white;
+      font-size: 13px;
+      overflow: hidden;
+    }
+
+    .gridContainer__child:nth-child(1) {
+      grid-area: first;
+    }
+
+    .gridContainer__child:nth-child(2) {
+      grid-area: second;
+    }
+
+    .gridContainer__child:nth-child(3) {
+      grid-area: third;
+    }
+
+    .gridContainer__child:nth-child(4) {
+      grid-area: fourth;
+    }
+
+    .gridContainer {
+      /* grid-template-columns: 1fr 1fr 2fr;
+      grid-template-rows: [row1-start] 40px [row1-end row2-start] 100px [row2-end row3-start] 20px [row3-end];
+      grid-template-areas: 
+      "first first first"
+      "second second fourth"
+      "second second third"; */
+
+      grid-template: 
+      [row1-start] "first first first" 40px [row1-end]
+      [row2-start] "second second fourth" 100px [row2-end]
+      [row3-start] "second second third" 20px [row3-end]
+      / 1fr 1fr 2fr;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="../index.html">Home</a>
+    <a href="./index.html">Container properties</a>
+    <a href="../items/index.html">Items properties</a>
+  </header>
+
+  <aside>
+    <a href="">
+      <span>grid-template-columns</span>
+      <span>grid-template-rows</span>
+    </a>
+
+    <a href="">grid-template-areas</a>
+
+    <a href="">grid-template</a>
+
+    <a href="">
+      <span>grid-column-gap</span>
+      <span>grid-row-gap</span>
+      <span>grid-gap</span>
+    </a>
+
+    <a href="">
+      <span>justify-items</span>
+      <span>align-items</span>
+    </a>
+
+    <a href="">
+      <span>justify-content</span>
+      <span>align-content</span>
+    </a>
+
+    <a href="">
+      <span>grid-auto-columns</span>
+      <span>grid-auto-rows</span>
+    </a>
+
+    <a href="">grid-auto-flow</a>
+
+    <a href="">grid</a>
+  </aside>
+
+  <section>
+    <div class="testArea">
+      <div class="demonstration">
+        <p>
+          grid-template-columns: 1fr 1fr 2fr;<br/><br/>
+          grid-template-rows: <br/>[row1-start] 40px [row1-end row2-start] 100px [row2-end row3-start] 20px [row3-end];<br/><br/>
+          grid-template-areas: <br/>
+          "first first first"<br/>
+          "second second fourth"<br/>
+          "second second third";<br/>
+          <br/> <br/>
+          grid-template: <br/>
+          [row1-start] "first first first" 40px [row1-end] <br/>
+          [row2-start] "second second fourth" 100px [row2-end] <br/>
+          [row3-start] "second second third" 20px [row3-end] <br/>
+          / 1fr 1fr 2fr;
+        </p>
+
+        <div class="gridContainer">
+          <div class="gridContainer__child">Child - 1</div>
+          <div class="gridContainer__child">Child - 2</div>
+          <div class="gridContainer__child">Child - 3</div>
+          <div class="gridContainer__child">Child - 4</div>
+          <div class="gridContainer__child">Child - 5</div>
+          <div class="gridContainer__child">Child - 6</div>
+          <div class="gridContainer__child">Child - 7</div>
+          <div class="gridContainer__child">Child - 8</div>
+          <div class="gridContainer__child">Child - 9</div>
+          <div class="gridContainer__child">Child - 10</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Don't be afraid by something new</footer>
+</body>
+
+</html>
